@@ -1,0 +1,138 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="description" content="Turn laser scans and point clouds into engineering-ready CAD/BIM models, deviation reports and digital-twin geometry." />
+  <title>PointCloud Engineering | Scan to CAD, BIM & Inspection</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/styles.css" />
+</head>
+<body>
+  <div class="noise"></div>
+  <header class="nav">
+    <a class="brand" href="#top" aria-label="PointCloud Engineering home">
+      <span class="brand-mark" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></span>
+      <span>POINTCLOUD<span class="muted">.ENGINEERING</span></span>
+    </a>
+    <nav>
+      <a href="#capabilities">Capabilities</a>
+      <a href="#workflow">Workflow</a>
+      <a href="#industries">Industries</a>
+    </nav>
+    <a class="btn btn-small" href="mailto:gundoganfa@gmail.com?subject=PointCloud%20Pilot%20Project">Request a pilot</a>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <div class="hero-copy">
+        <div class="eyebrow"><span class="pulse"></span> REALITY CAPTURE → ENGINEERING DATA</div>
+        <h1>Your scan is not the deliverable.<br><span>Your decisions are.</span></h1>
+        <p class="lead">We turn raw point clouds into measurable, engineering-ready outputs: CAD/BIM geometry, meshes, as-built models and deviation reports.</p>
+        <div class="hero-actions">
+          <a class="btn" href="mailto:gundoganfa@gmail.com?subject=PointCloud%20Pilot%20Project&body=Hi%2C%20I%27d%20like%20to%20discuss%20a%20point-cloud%20pilot.">Start with one scan <span>↗</span></a>
+          <a class="text-link" href="#capabilities">See what we deliver ↓</a>
+        </div>
+        <div class="trust-row">
+          <span>E57</span><span>LAS / LAZ</span><span>RCP / RCS</span><span>OBJ</span><span>IFC</span><span>DXF / DWG</span>
+        </div>
+      </div>
+
+      <div class="visual" aria-label="Interactive point cloud visualization">
+        <canvas id="cloud"></canvas>
+        <div class="hud hud-top"><span class="dot"></span> SCAN 04 / REGISTERED</div>
+        <div class="hud hud-left">Δ 4.8 mm<br><small>MAX DEVIATION</small></div>
+        <div class="hud hud-right">18.6M<br><small>POINTS</small></div>
+        <div class="scan-line"></div>
+        <div class="axis"><span>X</span><span>Y</span><span>Z</span></div>
+      </div>
+    </section>
+
+    <section class="problem-strip">
+      <p>Raw scans are dense.</p>
+      <p>Engineering teams need answers.</p>
+      <p class="accent">We bridge the gap.</p>
+    </section>
+
+    <section id="capabilities" class="section">
+      <div class="section-head">
+        <span class="kicker">01 / CAPABILITIES</span>
+        <h2>From millions of points<br>to useful geometry.</h2>
+        <p>Built around the outputs surveyors, EPCs, BIM teams and industrial operators actually need.</p>
+      </div>
+      <div class="cap-grid">
+        <article class="card card-featured">
+          <div class="icon">⌁</div><span class="tag">SCAN → MODEL</span>
+          <h3>Scan-to-CAD / BIM</h3>
+          <p>Convert registered point clouds into structured as-built geometry for downstream design and documentation.</p>
+          <ul><li>Walls, floors & structures</li><li>Pipes & equipment geometry</li><li>IFC / CAD-ready deliverables</li></ul>
+        </article>
+        <article class="card">
+          <div class="icon">△</div><span class="tag">QUALITY</span>
+          <h3>Deviation inspection</h3>
+          <p>Compare as-built reality against design geometry and identify where installation differs from intent.</p>
+          <div class="mini-chart"><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+        </article>
+        <article class="card">
+          <div class="icon">◇</div><span class="tag">GEOMETRY</span>
+          <h3>Meshing & measurements</h3>
+          <p>Create surfaces, sections, clearances, dimensions and volumes directly from reality-capture data.</p>
+          <div class="measure">12.428 <small>m</small><span>↔</span></div>
+        </article>
+        <article class="card">
+          <div class="icon">◎</div><span class="tag">DIGITAL TWIN</span>
+          <h3>Asset-ready models</h3>
+          <p>Prepare geometry for digital-twin, asset-management and retrofit workflows without rebuilding the world by hand.</p>
+          <div class="nodes"><b></b><b></b><b></b><b></b><b></b></div>
+        </article>
+      </div>
+    </section>
+
+    <section id="workflow" class="section workflow">
+      <div class="section-head compact">
+        <span class="kicker">02 / WORKFLOW</span>
+        <h2>One clean path from field to decision.</h2>
+      </div>
+      <div class="steps">
+        <article><span class="num">01</span><div><h3>Capture</h3><p>Terrestrial laser scanner, mobile mapping or existing registered cloud.</p></div></article>
+        <article><span class="num">02</span><div><h3>Process</h3><p>Clean, segment, align and extract engineering geometry.</p></div></article>
+        <article><span class="num">03</span><div><h3>Verify</h3><p>Measure clearances, deviations, dimensions and quality.</p></div></article>
+        <article><span class="num">04</span><div><h3>Deliver</h3><p>CAD, BIM, mesh, report or digital-twin-ready output.</p></div></article>
+      </div>
+    </section>
+
+    <section id="industries" class="section industries">
+      <div class="section-head">
+        <span class="kicker">03 / WHERE IT FITS</span>
+        <h2>Especially valuable where rework is expensive.</h2>
+      </div>
+      <div class="industry-grid">
+        <div class="industry"><span>01</span><h3>Industrial plants</h3><p>Brownfield retrofit, machine layouts, piping and clearance verification.</p></div>
+        <div class="industry"><span>02</span><h3>Data centers</h3><p>MEP as-builts, equipment positioning, retrofit planning and deviation checks.</p></div>
+        <div class="industry"><span>03</span><h3>Energy & substations</h3><p>Existing-condition capture, equipment geometry and engineering documentation.</p></div>
+        <div class="industry"><span>04</span><h3>Construction & EPC</h3><p>Progress verification, QA/QC, BIM comparison and handover documentation.</p></div>
+      </div>
+    </section>
+
+    <section class="pilot">
+      <div>
+        <span class="kicker">PILOT PROJECT</span>
+        <h2>Give us one scan.<br>Judge us by the output.</h2>
+      </div>
+      <div class="pilot-copy">
+        <p>Send a sample dataset and the engineering result you need. We’ll scope a focused pilot around your actual workflow.</p>
+        <a class="btn btn-light" href="mailto:gundoganfa@gmail.com?subject=PointCloud%20Pilot%20Project&body=Hi%2C%20I%20have%20a%20sample%20point-cloud%20dataset%20and%20would%20like%20to%20discuss%20a%20pilot.">Request a pilot <span>↗</span></a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="brand"><span class="brand-mark"><i></i><i></i><i></i><i></i><i></i></span><span>POINTCLOUD<span class="muted">.ENGINEERING</span></span></div>
+    <p>Reality capture → engineering intelligence.</p>
+    <p>© <span id="year"></span></p>
+  </footer>
+  <script src="/script.js"></script>
+</body>
+</html>
