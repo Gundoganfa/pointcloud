@@ -9,6 +9,11 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/styles.css" />
+  <link rel="stylesheet" href="/asset-hero.css" />
+  <link rel="stylesheet" href="/asset-scanbim.css" />
+  <link rel="stylesheet" href="/asset-deviation.css" />
+  <link rel="stylesheet" href="/asset-mesh.css" />
+  <link rel="stylesheet" href="/asset-twin.css" />
 </head>
 <body>
   <div class="noise"></div>
@@ -42,6 +47,7 @@
 
       <div class="visual" aria-label="Interactive point cloud visualization">
         <canvas id="cloud"></canvas>
+        <div class="hero-render asset-hero" role="img" aria-label="Industrial scan transforming from point cloud to engineering model"></div>
         <div class="hud hud-top"><span class="dot"></span> SCAN 04 / REGISTERED</div>
         <div class="hud hud-left">Δ 4.8 mm<br><small>MAX DEVIATION</small></div>
         <div class="hud hud-right">18.6M<br><small>POINTS</small></div>
@@ -64,24 +70,28 @@
       </div>
       <div class="cap-grid">
         <article class="card card-featured">
+          <div class="card-visual card-visual-large asset-scanbim" role="img" aria-label="Point cloud transforming into a BIM model"></div>
           <div class="icon">⌁</div><span class="tag">SCAN → MODEL</span>
           <h3>Scan-to-CAD / BIM</h3>
           <p>Convert registered point clouds into structured as-built geometry for downstream design and documentation.</p>
           <ul><li>Walls, floors & structures</li><li>Pipes & equipment geometry</li><li>IFC / CAD-ready deliverables</li></ul>
         </article>
         <article class="card">
+          <div class="card-visual asset-deviation" role="img" aria-label="Design versus as-built deviation inspection heatmap"></div>
           <div class="icon">△</div><span class="tag">QUALITY</span>
           <h3>Deviation inspection</h3>
           <p>Compare as-built reality against design geometry and identify where installation differs from intent.</p>
           <div class="mini-chart"><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
         </article>
         <article class="card">
+          <div class="card-visual asset-mesh" role="img" aria-label="Meshed industrial component with measurement planes"></div>
           <div class="icon">◇</div><span class="tag">GEOMETRY</span>
           <h3>Meshing & measurements</h3>
           <p>Create surfaces, sections, clearances, dimensions and volumes directly from reality-capture data.</p>
           <div class="measure">12.428 <small>m</small><span>↔</span></div>
         </article>
         <article class="card">
+          <div class="card-visual asset-twin" role="img" aria-label="Connected industrial digital twin model"></div>
           <div class="icon">◎</div><span class="tag">DIGITAL TWIN</span>
           <h3>Asset-ready models</h3>
           <p>Prepare geometry for digital-twin, asset-management and retrofit workflows without rebuilding the world by hand.</p>
