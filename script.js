@@ -1,0 +1,6 @@
+document.getElementById("year").textContent=new Date().getFullYear();
+const canvas=document.getElementById("cloud"),ctx=canvas.getContext("2d");let pts=[],mx=0,my=0;
+function resize(){const d=Math.min(devicePixelRatio,2),r=canvas.getBoundingClientRect();canvas.width=r.width*d;canvas.height=r.height*d;ctx.setTransform(d,0,0,d,0,0);make()}
+function make(){const r=canvas.getBoundingClientRect();pts=[];for(let i=0;i<1250;i++){let a=Math.random()*Math.PI*2,rad=Math.pow(Math.random(),.55),x=Math.cos(a)*rad,y=(Math.random()-.5)*1.45,z=Math.sin(a)*rad;let cut=Math.random();if(cut>.72){x*=.52;y*=1.15;z*=.52}pts.push({x,y,z,s:Math.random()*1.25+.3,o:Math.random()*.6+.18})}}
+function draw(t){const r=canvas.getBoundingClientRect(),w=r.width,h=r.height;ctx.clearRect(0,0,w,h);let ry=t*.00008+mx*.12,rx=-.22+my*.08,cy=Math.cos(ry),sy=Math.sin(ry),cx=Math.cos(rx),sx=Math.sin(rx);for(const p of pts){let x=p.x*cy-p.z*sy,z=p.x*sy+p.z*cy,y=p.y*cx-z*sx;z=p.y*sx+z*cx;let sc=1.25/(2.3+z),px=w*.5+x*sc*w*.43,py=h*.49+y*sc*h*.46;let glow=Math.max(.15,1-z*.4);ctx.fillStyle=`rgba(113,242,189,${p.o*glow})`;ctx.fillRect(px,py,p.s,p.s)}requestAnimationFrame(draw)}
+canvas.addEventListener("pointermove",e=>{const r=canvas.getBoundingClientRect();mx=(e.clientX-r.left)/r.width-.5;my=(e.clientY-r.top)/r.height-.5});addEventListener("resize",resize);resize();requestAnimationFrame(draw);
